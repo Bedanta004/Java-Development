@@ -93,6 +93,7 @@ public class DemoJava8{
         // obj4.config();
 
         // If the class is static
-        
+        A.B obj5 = new A.B();
+        obj5.config();
     }
 }

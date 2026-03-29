@@ -6,8 +6,22 @@
 class SonuException extends Exception{
     public SonuException(String str){}
 }
+
+class A{
+    public void show() throws ClassNotFoundException{
+        Class.forName("Calc");
+    }
+}
 public class ExceptionHandle11{
     public static void main(String args[]){
+
+        try{
+            Class.forName("Demo");
+        }
+        catch(ClassNotFoundException e){
+            System.out.println("Not able to find the class "+ e);
+        }
+
         int i = 20;
         int j = 0;
 

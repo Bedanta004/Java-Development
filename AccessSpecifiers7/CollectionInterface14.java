@@ -8,7 +8,8 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 import java.util.Comparator;
-
+import java.util.Arrays;
+import java.util.stream.Stream;
 
 public class CollectionInterface14{
     public static void main(String args[]){
@@ -103,5 +104,22 @@ public class CollectionInterface14{
         // /Comparing based on last digit
         Collections.sort(arr, com);
         System.out.println(arr);
+
+
+        List<Integer> array = Arrays.asList(16, 5, 7, 2);
+        int sum = 0;
+
+        for(int n : array){
+            if(n%2 == 0) sum += n*2;
+        }
+
+        System.out.println(sum);
+
+
+        // Using the Lambda Function
+        array.forEach(n -> System.out.println(n));
+
+        // Stream<Integer> s1 = nums.stream();
+        // s1.forEach(n -> System.out.println(n));
     }
 }
